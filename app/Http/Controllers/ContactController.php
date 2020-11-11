@@ -16,7 +16,7 @@ class ContactController extends Controller
     	]);
 
     	try {
-    		Notification::route('mail','jbronze0@gmail.com')->notify(new Message($request));
+    		Notification::route('mail','contact@fillycoder.com')->notify(new Message($request));
     	} catch (\Exception $e) {
     		return back()->with('error','Sorry something went wrong, try again later!');
     	}
